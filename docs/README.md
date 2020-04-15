@@ -38,7 +38,7 @@
 
 这是一篇记录自己 19 岁那年参加全国大学生电子设计大赛的短文，包括自己两年备战电赛的经历、 STM32 嵌入式开发的总结、大学生活议题的讨论。使用 Latex 编写，作为信息学院暑假嵌入式培训的讲义，并在和电子科技协会成员的共同努力下为其录制教学视频 。
 
-🏗项目地址：[https://github.com/CNYuYang/My-19-years-old](https://github.com/CNYuYang/My-19-years-old)
+🏗项目地址：[My-19-years-old](https://github.com/CNYuYang/My-19-years-old)
 
 ▶视频地址：[STM32系列视频(CubeMX+MDK5+HAL库+库函数一站式学习)](https://www.bilibili.com/video/BV1q4411d7RX)
 
@@ -46,7 +46,7 @@
 
 在 MIT6.824 分布式系统学习过程中，自己的一些学习心得、笔记。以及其 Lab 的文档翻译、 GO 实现代码与实验分析。该项目已完成 MapReduce 部分。
 
-🏗项目地址：[https://github.com/CNYuYang/DistributedSystems](https://github.com/CNYuYang/DistributedSystems)
+🏗项目地址：[DistributedSystems](https://github.com/CNYuYang/DistributedSystems)
 
 ▶文档地址：[https://reyunn.gitbook.io/mit6-824/](https://reyunn.gitbook.io/mit6-824/)
 
@@ -54,4 +54,4 @@
 
 一个基于 Spring Boot、 Mybatis 的物联网平台, 采用前后端分离的开发方式。平台能实现：物联网设备数据的采集、项目设备的管理、数据报表、报警提示等功能。前端使用 Vue.js 开发，通过 axios 与后端交互。后端 api遵循 RestFul 设计风格。  
 
-🏗项目地址：[https://github.com/CNYuYang/IoT-Service](https://github.com/CNYuYang/IoT-Service)
+🏗项目地址：[IoT-Service](https://github.com/CNYuYang/IoT-Service)
