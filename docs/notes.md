@@ -10,7 +10,13 @@
 
 │ ├─ ACwing蓝桥培训课
 
-│ │ └─ [整数二分](algorithm/lanqiao/01.md)
+│ │ ├─ [整数二分](algorithm/lanqiao/01.md)
+
+│ │ ├─ [递归与递推](algorithm/lanqiao/02.md)
+
+│ │ ├─ [前缀和](algorithm/lanqiao/03.md)
+
+│ │ └─ [数学](algorithm/lanqiao/04.md)
 
 │ │
 
