@@ -1,25 +1,15 @@
----
-title : MySQL 学习笔记
-toc : true 
-categories: 数据库
-date: 2019-8-19 20:10:33
-tags: [SQL,MySQL,学习笔记]
----
-
 # Windows服务
 
-```
+```bash
 -- 启动MySQL
     net start mysql
 -- 创建Windows服务
     sc create mysql binPath= mysqld_bin_path(注意：等号与值之间有空格)
 ```
 
-<!-- more -->
-
 # 连接与断开服务器
 
-```
+```bash
 mysql -h 地址 -P 端口 -u 用户名 -p 密码
 
 SHOW PROCESSLIST -- 显示哪些线程正在运行
@@ -28,7 +18,7 @@ SHOW VARIABLES -- 显示系统变量信息
 
 # 数据库操作
 
-```
+```sql
 -- 查看当前数据库
     SELECT DATABASE();
 -- 显示当前时间、用户名、数据库版本
@@ -51,7 +41,7 @@ SHOW VARIABLES -- 显示系统变量信息
 
 # 表的操作
 
-```
+```sql
 -- 创建表
     CREATE [TEMPORARY] TABLE[ IF NOT EXISTS] [库名.]表名 ( 表的结构定义 )[ 表选项]
         每个字段必须有数据类型
@@ -132,7 +122,7 @@ SHOW VARIABLES -- 显示系统变量信息
 
 #  数据操作
 
-```
+```sql
 -- 增
     INSERT [INTO] 表名 [(字段列表)] VALUES (值列表)[, (值列表), ...]
         -- 如果要插入的值列表包含所有字段并且顺序一致，则可以省略字段列表。
@@ -153,7 +143,7 @@ SHOW VARIABLES -- 显示系统变量信息
 
 #  字符集编码
 
-```
+```sql
 -- MySQL、数据库、表、字段均可设置编码
 -- 数据编码与客户端编码不需一致
 SHOW VARIABLES LIKE 'character_set_%'   -- 查看所有字符集编码项
@@ -175,7 +165,7 @@ SET NAMES GBK;  -- 相当于完成以上三个设置
 
 # 数据类型（列类型）
 
-```
+```sql
 1. 数值类型
 
 -- a. 整型 ----------
@@ -288,7 +278,7 @@ set(val1, val2, val3...)
 
 #  选择类型
 
-```
+```sql
 -- PHP角度
 1. 功能满足
 2. 存储空间尽量小，处理效率更高
@@ -309,7 +299,7 @@ set(val1, val2, val3...)
 
 #  列属性（列约束）
 
-```
+```sql
 1. PRIMARY 主键
     - 能唯一标识记录的字段，可以作为主键。
     - 一个表只能有一个主键。
@@ -362,7 +352,7 @@ set(val1, val2, val3...)
 
 #  建表规范
 
-```
+```sql
     -- Normal Format, NF
         - 每个表保存一个实体信息
         - 每个具有一个ID字段作为主键
@@ -380,7 +370,7 @@ set(val1, val2, val3...)
 
 #  SELECT
 
-```
+```sql
 SELECT [ALL|DISTINCT] select_expr FROM -> WHERE -> GROUP BY [合计函数] -> HAVING -> ORDER BY -> LIMIT
 a. select_expr
     -- 可以用 * 表示所有字段。
@@ -444,7 +434,7 @@ h. DISTINCT, ALL 选项
 
 #  UNION
 
-```
+```sql
     将多个select查询的结果组合成一个结果集合。
     SELECT ... UNION [ALL|DISTINCT] SELECT ...
     默认 DISTINCT 方式，即所有返回的行都是唯一的
@@ -456,7 +446,7 @@ h. DISTINCT, ALL 选项
 
 # 子查询
 
-```
+```sql
     - 子查询需用括号包裹。
 -- from型
     from后要求是一个表，必须给子查询结果取个别名。
@@ -489,7 +479,7 @@ h. DISTINCT, ALL 选项
 
 # 连接查询(join)
 
-```
+```sql
     将多个表的字段进行连接，可以指定连接条件。
 -- 内连接(inner join)
     - 默认就是内连接，可省略inner。
@@ -518,7 +508,7 @@ select info.id, info.name, info.stu_num, extra_info.hobby, extra_info.sex from i
 
 # 导出
 
-```
+```sql
 select * into outfile 文件地址 [控制格式] from 表名;   -- 导出表数据
 
 load data [local] infile 文件地址 [replace|ignore] into table 表名 [控制格式]; -- 导入数据
@@ -545,7 +535,7 @@ lines   控制行格式
 
 #  INSERT
 
-```
+```sql
 select语句获得的数据可以用insert插入。
 可以省略对列的指定，要求 values () 括号内，提供给了按照列顺序出现的所有字段的值。
     或者使用set语法。
@@ -564,7 +554,7 @@ select语句获得的数据可以用insert插入。
 
 # DELETE
 
-```
+```sql
 DELETE FROM tbl_name [WHERE where_definition] [ORDER BY ...] [LIMIT row_count]
 按照条件删除。where
 指定删除的最多记录数。limit
@@ -575,7 +565,7 @@ delete from 需要删除数据多表1，表2 using 表连接操作 条件。
 
 # TRUNCATE
 
-```
+```sql
 TRUNCATE [TABLE] tbl_name
 清空数据
 删除重建表
@@ -588,7 +578,7 @@ TRUNCATE [TABLE] tbl_name
 
 # 备份与还原
 
-```
+```sql
 备份，将数据的结构与表内数据保存起来。
 利用 mysqldump 指令完成。
 -- 导出
@@ -613,7 +603,7 @@ mysqldump [options] --all--database
 
 # 视图
 
-```
+```sql
 什么是视图：
     视图是一个虚拟表，其内容由查询定义。同真实的表一样，视图包含一系列带有名称的列和行数据。但是，视图并不在数据库中以存储的数据值集形式存在。行和列数据来自由定义视图的查询所引用的表，并且在引用视图时动态生成。
     视图具有表结构文件，但不存在数据文件。
@@ -647,7 +637,7 @@ CREATE [OR REPLACE] [ALGORITHM = {UNDEFINED | MERGE | TEMPTABLE}] VIEW view_name
 
 # 事务(transaction)
 
-```
+```sql
 事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。
     - 支持连续SQL的集体成功或集体撤销。
     - 事务是数据库在数据晚自习方面的一个功能。
@@ -697,7 +687,7 @@ CREATE [OR REPLACE] [ALGORITHM = {UNDEFINED | MERGE | TEMPTABLE}] VIEW view_name
 
 # 锁表
 
-```
+```sql
 表锁定只用于防止其它客户端进行不正当地读取和写入
 MyISAM 支持表锁，InnoDB 支持行锁
 -- 锁定
@@ -708,7 +698,7 @@ MyISAM 支持表锁，InnoDB 支持行锁
 
 # 触发器
 
-```
+```sql
     触发程序是与表有关的命名数据库对象，当该表出现特定事件时，将激活该对象
     监听：记录的增加、修改、删除。
 -- 创建触发器
@@ -764,7 +754,7 @@ end
 
 # SQL编程
 
-```
+```sql
 --// 局部变量 ----------
 -- 变量声明
     declare var_name[,...] type [default value]
@@ -926,7 +916,7 @@ END
 
 # 用户和权限管理
 
-```
+```sql
 -- root密码重置
 1. 停止MySQL服务
 2.  [Linux] /usr/local/mysql/bin/safe_mysqld --skip-grant-tables &
@@ -1007,7 +997,7 @@ GRANT OPTION    -- 允许授予权限
 
 # 表维护
 
-```
+```sql
 -- 分析和存储表的关键字分布
 ANALYZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE 表名 ...
 -- 检查一个或多个表是否有错误
@@ -1019,7 +1009,7 @@ OPTIMIZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE tbl_name [, tbl_name] ...
 
 # 杂项
 
-```
+```sql
 1. 可用反引号（`）为标识符（库名、表名、字段名、索引、别名）包裹，以避免与关键字重名！中文也可以作为标识符！
 2. 每个库目录存在一个保存当前数据库的选项文件db.opt。
 3. 注释：
