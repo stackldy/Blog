@@ -16,6 +16,8 @@
 
 │ └─ 双指针
 
+│ │ ├─ [leetcode1248 统计优美子数组](algorithm/leetcode/1248)
+
 │ │ └─ [leetcode11 盛最多水的容器](algorithm/leetcode/11)
 
 │ │
