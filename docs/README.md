@@ -48,7 +48,7 @@
 
 🏗项目地址：[DistributedSystems](https://github.com/CNYuYang/DistributedSystems)
 
-▶文档地址：[https://reyunn.gitbook.io/mit6-824/](https://reyunn.gitbook.io/mit6-824/)
+▶文档地址：[https://yuyang.run/#/notes/分布式/6.824](https://yuyang.run/#/notes/分布式/6.824)
 
 ### IoT-Service 
 
