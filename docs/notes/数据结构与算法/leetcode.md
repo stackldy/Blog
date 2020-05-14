@@ -18,7 +18,9 @@
 
 │ └─ 位运算
 
-│ │ └─ [leetcode1608 跳跃游戏](/notes/数据结构与算法/leetcode/1608)
+│ │ └─ [leetcode136 只出现一次的数字](/notes/数据结构与算法/leetcode/136)
+
+│ │ └─ [leetcode1608 数字出现的次数](/notes/数据结构与算法/leetcode/1608)
 
 │ │ 
 
