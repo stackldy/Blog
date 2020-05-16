@@ -47,3 +47,9 @@
 │ └─ Hash表
 
 │ │ └─ [leetcode560 和为k的子数组](/notes/数据结构与算法/leetcode/560)
+
+│ │
+
+│ └─ 链表表
+
+│ │ └─ [leetcode25 k个一组反转链表](/notes/数据结构与算法/leetcode/25)
