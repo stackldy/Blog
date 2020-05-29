@@ -25,3 +25,9 @@ Halo 是一款现代化的个人独立博客系统，给习惯写博客的同学
 第三篇：[Controller - admin](/notes/源码阅读/Halo/03)
 
 第四篇：[Controller - context](/notes/源码阅读/Halo/04)
+
+第五篇：[Repository](/notes/源码阅读/Halo/05)
+
+第六篇：[Service](/notes/源码阅读/Halo/06)
+
+第七篇：[Model](/notes/源码阅读/Halo/07)
