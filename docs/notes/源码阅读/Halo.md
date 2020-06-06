@@ -31,3 +31,8 @@ Halo 是一款现代化的个人独立博客系统，给习惯写博客的同学
 第六篇：[Service](/notes/源码阅读/Halo/06)
 
 第七篇：[Model](/notes/源码阅读/Halo/07)
+
+第八篇：[Listener](https://blog.csdn.net/hjing123/article/details/89203524)
+
+第九篇：[annotation](/notes/源码阅读/Halo/08)
+
