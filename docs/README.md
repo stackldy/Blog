@@ -18,6 +18,10 @@
 
 负责 BMS 硬件入网，对 mtk 固件进行二次开发，实现将 BMS 的信息通过 mqtt 通信发送至云端，同时实现数据的下行对设备的控制。  
 
+2020.7-至今 武汉青藤云安全-Java实习生
+
+
+
 ## 获奖经历
 
 ### 湖北省 Java A 组三等奖  
@@ -49,9 +53,3 @@
 🏗项目地址：[DistributedSystems](https://github.com/CNYuYang/DistributedSystems)
 
 ▶文档地址：[https://yuyang.run/#/notes/分布式/6.824](https://yuyang.run/#/notes/分布式/6.824)
-
-### IoT-Service 
-
-一个基于 Spring Boot、 Mybatis 的物联网平台, 采用前后端分离的开发方式。平台能实现：物联网设备数据的采集、项目设备的管理、数据报表、报警提示等功能。前端使用 Vue.js 开发，通过 axios 与后端交互。后端 api遵循 RestFul 设计风格。  
-
-🏗项目地址：[IoT-Service](https://github.com/CNYuYang/IoT-Service)

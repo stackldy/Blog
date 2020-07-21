@@ -52,6 +52,14 @@
 
 │
 
+├── 工具
+
+│ │
+
+│ └─ [Jenkins](/notes/工具/jenkins/jenkins.md)
+
+│
+
 ├── 源码阅读
 
 │ │
