@@ -56,7 +56,7 @@
 
 │ │
 
-│ └─ [Jenkins](/notes/工具/jenkins/jenkins.md)
+│ └─ [Jenkins](/notes/工具/jenkins/jenkins)
 
 │
 
